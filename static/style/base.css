@@ -1,0 +1,141 @@
+
+body
+{
+    background-color: #e8e8e8;
+}
+
+#logo
+{
+    width: 28px; 
+    height: 28px;
+}
+
+#logo-text
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+    padding-left: 10px;
+}
+
+#paragraph
+{
+    font-family: 'Literata', serif;
+}
+
+.ar-button
+{
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 5px;
+}
+
+.ar-button:hover
+{
+    border-bottom: 1px solid;
+    border-color: #03dac6;
+    opacity: 1;
+}
+
+.ar-subheading
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+.ar-paragraph
+{
+    font-family: 'Literata', serif;	
+    font-weight: lighter;
+}
+
+.ar-heading
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: smaller;
+}
+
+.ar-opacity
+{
+    opacity: 0.5;
+}
+
+.night-mode
+{
+    background-color: #121212;
+    color: white;
+}
+
+.ar-form
+{
+    background-color: #ededed;
+    min-width: 450px;
+    max-width: 450px;
+    margin:auto;
+}
+
+.ar-container
+{
+    overflow: hidden;
+    display: inline-flex;
+    text-align: center;
+}
+
+.footer 
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #03dac6;
+    color: white;
+    text-align: center;
+}
+
+
+#ic-night
+{
+    width: 26px; 
+    height: 26px;
+    margin: 15px;
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: white;
+}
+
+#ic-night:hover
+{
+    filter: invert();
+    width: 26px; 
+    height: 26px;
+    margin: 15px;
+    opacity: 0.9;
+}
+
+#nav
+{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-selected
+{
+    border-radius: 25px;
+    border: 1px solid;
+    border-color: white;
+}
+
+#username
+{
+    text-align: right;
+    font-size: smaller;
+}
+
+#drop-file
+{
+    border: black;
+    border-radius: 20px;
+    border: 2px dashed;
+    width: auto;
+    height: 200px;
+}

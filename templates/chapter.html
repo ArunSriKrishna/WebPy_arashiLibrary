@@ -1,0 +1,51 @@
+$def with (title)
+<!DOCTYPE html>
+
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Literata:wght@200&family=Open+Sans&family=Raleway:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/w3.css">
+  <link rel="stylesheet" href="./style/base.css">
+  <script src="./script/night-mode.js"></script>
+
+  <title>arashiLibrary- \
+    $if title: : $title\</title>
+</head>
+
+ <body>
+
+    <div id="header">
+        <div id="nav" class="w3-bar w3-teal w3-padding w3-card ">
+
+          <img id="logo" src="./assets/ic_book.png">
+          <a id="logo-text" style="text-decoration: none;" href="#home" class="w3-bar-item"> arashiLibrary</a>
+ 
+          <div> 
+            <a href="#home" class="ar-opacity w3-bar-item ar-button">Home</a>
+            <a href="#browse" class="ar-opacity w3-bar-item ar-button">Browse</a>
+            <a href="#library" class="ar-opacity w3-bar-item ar-button">Library</a>
+            <a href="#reader" class="ar-opacity w3-bar-item ar-button">Reader</a>         
+          </div>
+
+          <img id="ic-night" onclick="toggle_nightmode()" src="./assets/ic_night.png">
+
+          <div>
+            <a href="#login" class="ar-opacity w3-bar-item ar-button">Login</a>
+            <a href="#register" class="ar-opacity w3-bar-item ar-button">Register</a> 
+          </div>
+        </div>    
+    </div>
+   
+    <div class="w3-content w3-container"> 
+      <p id="username" class="ar-heading"> Welcome, Guest!</p>
+
+      <h2 class="ar-subheading w3-center">$title</h2>
+
+    </div>
+
+    <div class ="footer w3-teal">
+      <p class="w3-content">Contact: arashidesu@protonmail.com</p>
+    </div>
+    $:page  
+  </body>
+ </html>

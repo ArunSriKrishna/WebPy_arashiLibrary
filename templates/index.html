@@ -1,0 +1,73 @@
+$def with (globals)
+<!DOCTYPE html>
+
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Literata:wght@200&family=Open+Sans&family=Raleway:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style/w3.css">
+  <link rel="stylesheet" href="static/style/base.css">
+  <script src="static/script/night-mode.js"></script>
+  <title>arashiLibrary - Home</title>
+</head>
+
+ <body>
+
+    <div id="header">
+        <div id="nav" class="w3-bar w3-teal w3-padding w3-card ">
+
+          <img id="logo" src="static/assets/ic_book.png">
+          <a id="logo-text" style="text-decoration: none;" href="#home" class="w3-bar-item"> arashiLibrary</a>
+ 
+          <div> 
+            <a href="/index" id="nav-selected" class="ar-opacity w3-bar-item ar-button">Home</a>
+            <a href="#browse" class="ar-opacity w3-bar-item ar-button">Browse</a>
+            <a href="#library" class="ar-opacity w3-bar-item ar-button">Library</a>
+            <a href="#reader" class="ar-opacity w3-bar-item ar-button">Reader</a>         
+          </div>
+
+          <img id="ic-night" onclick="toggle_nightmode()" src="static/assets/ic_night.png">
+
+          <div>
+            <a href="/login" class="ar-opacity w3-bar-item ar-button">Login</a>
+            <a href="/register" class="ar-opacity w3-bar-item ar-button">Register</a> 
+          </div>
+        </div>    
+    </div>
+   
+    <div class="w3-content w3-container"> 
+      $if globals['username']: <p id="username" class="ar-heading"> Welcome back! $globals['username'] </p> 
+      $else:<p id="username" class="ar-heading"> Welcome, Guest</p>
+ 
+
+      <h2 class="ar-subheading w3-center">Get started on Reading!</h2>
+      <p class="ar-paragraph w3-center">arashiLibrary is built with Readers in mind, Sign up and starting reading on the Go!</p>
+      
+      <br>
+      <div class="w3-center">
+        <div class="w3-bar"> 
+          <button id="sign-up" onclick="" class="w3-btn w3-transperent w3-border w3-border-black w3-round">Register now</button> 
+        </div>
+      </div>
+      <br>
+
+    </div>
+    <div class="w3-content w3-container"> 
+      <br>
+        <h2 class="ar-subheading w3-center"> Try the Cloud Reader</h2>
+        <p class="ar-paragraph w3-center">Drag and drop your eBook file and get started reading.</p>
+        <br>
+        
+        <div class="w3-content w3-container" id="drop-file" ondrop="dropHandler(event);">
+          <br>
+          <br>
+          <br>
+          <p class="ar-heading w3-center">Drop your .txt .pdf .epub files here</p>
+        </div>
+    </div>
+
+    <div class ="footer w3-teal">
+      <p class="w3-content ar-subheading">Contact: arashidesu@protonmail.com</p>
+    </div>
+
+  </body>
+ </html>

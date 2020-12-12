@@ -1,0 +1,87 @@
+$def with (title, globals)
+<!DOCTYPE html>
+
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Literata:wght@200&family=Open+Sans&family=Raleway:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style/w3.css">
+  <link rel="stylesheet" href="static/style/base.css">
+  <script src="static/script/night-mode.js"></script>
+
+  <title>arashiLibrary
+    $if title:
+     $title</title>
+</head>
+
+ <body>
+
+    <div id="header">
+        <div id="nav" class="w3-bar w3-teal w3-padding w3-card">
+
+          <img id="logo" src="static/assets/ic_book.png">
+          <a id="logo-text" style="text-decoration: none;" href="#home" class="w3-bar-item"> arashiLibrary</a>
+ 
+          <div> 
+            <a href="/index" class="ar-opacity w3-bar-item ar-button">Home</a>
+            <a href="#browse" class="ar-opacity w3-bar-item ar-button">Browse</a>
+            <a href="#library" class="ar-opacity w3-bar-item ar-button">Library</a>
+            <a href="#reader" class="ar-opacity w3-bar-item ar-button">Reader</a>         
+          </div>
+
+          <img id="ic-night" onclick="toggle_nightmode()" src="static/assets/ic_night.png">
+
+          <div>
+            <a href="/login" class="ar-opacity w3-bar-item ar-button">Login</a>
+            <a href="/register" id="nav-selected" class="ar-opacity w3-bar-item ar-button">Register</a> 
+          </div>
+        </div>    
+    </div>
+
+    <div class="w3-content w3-container"> 
+      $if globals['username']: <p id="username" class="ar-heading"> $globals['username'] is logged in!</p> 
+      $else:<p id="username" class="ar-heading"> Welcome, Guest</p>
+
+      <h2 class="ar-subheading w3-center">$title</h2>
+
+      <form class="w3-container ar-form ar-heading w3-round">
+        <br>
+        <br>
+        <div class="ar-container">
+        <label style="padding-right: 10px;">First Name*</label>
+        <input class="w3-input w3-round ar-subheading" type="text" style="width: 30%;" required>
+        <label style="padding-right: 10px; padding-left: 15px;">Last Name</label>
+        <input class="w3-input w3-round ar-subheading" type="text" style="width: 30%;">
+        </div>
+        <br>
+        <br>
+        <div class="ar-container">
+        <label style="padding-right: 15px;">Username*</label>
+        <input class="w3-input w3-round ar-subheading" type="text" required>
+        </div>
+        <br>
+        <br>
+        <div class="ar-container">
+        <label style="padding-right: 17px;">Password*</label>
+        <input class="w3-input w3-round ar-subheading" type="password" style="width: 35%;" required>
+        <label style="padding-left: 15px; vertical-align: middle;">Confirm Password*</label>
+        <input class="w3-input w3-round ar-subheading" type="password" style="width: 35%;" required>
+        </div>
+        <br>
+        <br>
+        <div class="ar-container" style="float: right;">
+        <input type="checkbox" id="save-session" style="vertical-align: middle;">
+        <label>&ensp;Show Password</label>
+        </div>
+        <br>
+        <br>
+        <button class="w3-button w3-transperant w3-blue w3-round" style="width: 100%;">Register</button>
+        <br>
+        <p class="ar-heading w3-center">Already have an account?<a href="/login" style="text-decoration: none;"><b> Login.</b></a></p>
+        <br>
+    </form>
+    </div>
+    <div class ="footer w3-teal">
+      <p class="w3-content ar-subheading">Contact: arashidesu@protonmail.com</p>
+    </div>
+  </body>
+ </html>
